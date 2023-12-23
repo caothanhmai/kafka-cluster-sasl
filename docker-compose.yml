@@ -22,5 +22,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./kafka_jaas.conf:/etc/kafka/kafka_jaas.conf
+      - ./consumer.properties:/etc/kafka/consumer.properties # Mount the consumer properties file
     links:
       - zookeeper
